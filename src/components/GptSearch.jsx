@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./GptSearch.css";
-import openai from "../utils/openAI";
-import { options } from "../utils/constants";
+import { OPENAI_KEY, options } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addGptTmdbResults } from "../utils/gptSearchSlice";
 import VideoCardsContainer from "./VideoCardsContainer";
@@ -27,10 +26,23 @@ const GptSearch = () => {
     e.preventDefault();
     const query = `Act as a movie recommendation system having knowledge of all the latest and old movies and suggest atmost 20 movies for the query : ${searchText.current.value}. The results should only contain movie names seperated by commas. If you are unable to fulfil the request, just send "Not found" in response.`;
     //Make API call to gpt api and get movie results
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4.1-nano-2025-04-14",
-      messages: [{ role: "user", content: query }],
+    // const completion = await openai.chat.completions.create({
+    //   model: "gpt-4.1-nano-2025-04-14",
+    //   messages: [{ role: "user", content: query }],
+    // });
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${OPENAI_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-4.1-nano-2025-04-14",
+        messages: [{ role: "user", content: query }],
+      }),
     });
+    const completion = await response.json();
     const results = completion?.choices[0]?.message?.content.split(", ");
     const promises = results.map((movie) => tmdbMovieSearch(movie));
     const tmdbMovies = await Promise.all(promises);

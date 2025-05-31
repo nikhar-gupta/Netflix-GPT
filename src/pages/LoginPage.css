@@ -2,6 +2,7 @@
   background-color: #000;
   height: 100vh;
   width: 100vw;
+  padding-top: 10vh;
 }
 
 .login-form {
@@ -40,7 +41,9 @@
   font-weight: 700;
   color: #fff;
 }
-
+.login-form #error-mssg {
+  color: rgb(229, 9, 20);
+}
 .login-form .new-user a {
   font-weight: 700;
   color: #fff;

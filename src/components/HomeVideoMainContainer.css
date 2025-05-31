@@ -1,0 +1,133 @@
+.homeVideoMainContainer {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -35vh;
+}
+.homeVideoMainContainer .videoPlayer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.homeVideoMainContainer .videoPlayer #trailer {
+  pointer-events: none;
+  position: absolute;
+  top: -6%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.homeVideoMainContainer .video-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 105vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 5rem 10rem 4rem;
+  color: #fff;
+  /* border: 1px solid red; */
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.homeVideoMainContainer .video-info .title {
+  -webkit-animation: movieTitle 7s forwards;
+  animation: movieTitle 7s forwards;
+}
+.homeVideoMainContainer .video-info .overview {
+  font-size: 1.5rem;
+  -webkit-animation: cssAnimation 7s forwards;
+  animation: cssAnimation 7s forwards;
+}
+.homeVideoMainContainer .video-info .trailer-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.homeVideoMainContainer .video-info .trailer-btns button {
+  all: unset;
+  text-align: center;
+  width: 160px;
+  height: 60px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.homeVideoMainContainer .video-info .trailer-btns #info-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes movieTitle {
+  0% {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+  90% {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+  100% {
+    font-size: 1.8rem;
+    margin-bottom: -8rem;
+  }
+}
+@-webkit-keyframes movieTitle {
+  0% {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+  90% {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+  100% {
+    font-size: 1.8rem;
+    margin-bottom: -8rem;
+  }
+}

@@ -14,10 +14,11 @@ function App() {
       element: <BrowsePage />,
     },
   ]);
+
   return (
-    <>
+    <div className="App">
       <RouterProvider router={appRouter} />
-    </>
+    </div>
   );
 }
 

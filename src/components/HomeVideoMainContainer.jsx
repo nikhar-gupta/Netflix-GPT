@@ -1,5 +1,5 @@
 import React from "react";
-import "./HomeVideoMainCOntainer.css";
+import "./HomeVideoMainContainer.css";
 import VideoPlayer from "./VideoPlayer";
 import VideoInfo from "./VideoInfo";
 import { useSelector } from "react-redux";

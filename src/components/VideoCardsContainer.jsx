@@ -14,10 +14,10 @@ const VideoCardsContainer = ({ title, data, stateField }) => {
       <h1>{title}</h1>
       <div className="videoCardsContainerSlider" ref={scrollRef}>
         <button onClick={() => scroll(-750)} className="scroll left">
-          LEFT
+          <img height="40px" src="\pics\left.png" alt="back" />
         </button>
         <button onClick={() => scroll(750)} className="scroll right">
-          RIGHT
+          <img height="40px" src="\pics\right.png" alt="back" />
         </button>
         <div className="videoCards">
           {movies?.map((movie, index) => {

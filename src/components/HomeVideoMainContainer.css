@@ -43,8 +43,8 @@
   );
 }
 .homeVideoMainContainer .video-info .title {
-  -webkit-animation: movieTitle 7s forwards;
-  animation: movieTitle 7s forwards;
+  -webkit-animation: movieInfo 7s forwards;
+  animation: movieInfo 7s forwards;
 }
 .homeVideoMainContainer .video-info .overview {
   font-size: 1.5rem;
@@ -103,7 +103,7 @@
   }
 }
 
-@keyframes movieTitle {
+@keyframes movieInfo {
   0% {
     font-size: 2.2rem;
     margin-bottom: 0;
@@ -117,7 +117,7 @@
     margin-bottom: -8rem;
   }
 }
-@-webkit-keyframes movieTitle {
+@-webkit-keyframes movieInfo {
   0% {
     font-size: 2.2rem;
     margin-bottom: 0;
@@ -129,5 +129,233 @@
   100% {
     font-size: 1.8rem;
     margin-bottom: -8rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .homeVideoMainContainer .video-info {
+    padding: 4rem 0 0 1.5rem;
+    width: 70vw;
+    justify-content: flex-start;
+    gap: 0.3rem;
+  }
+  .homeVideoMainContainer {
+    margin-bottom: 7rem;
+  }
+  .homeVideoMainContainer .video-info .title h1 {
+    font-size: 0.8rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns button {
+    width: 3rem;
+    height: 1rem;
+    font-size: 0.5rem;
+  }
+  .homeVideoMainContainer .video-info .overview {
+    font-size: 0.5rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns {
+    gap: 0.4rem;
+  }
+  @keyframes movieInfo {
+    0% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: -0.2rem;
+    }
+    90% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: -0.2rem;
+    }
+    100% {
+      font-size: 1rem;
+      margin-bottom: -2rem;
+      margin-top: 0.8rem;
+    }
+  }
+}
+@media only screen and (min-width: 424px) {
+  .homeVideoMainContainer .video-info {
+    padding: 5.5rem 0 0 1.5rem;
+    width: 50vw;
+  }
+  @keyframes movieInfo {
+    0% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: -0.2rem;
+    }
+    90% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: -0.2rem;
+    }
+    100% {
+      font-size: 1rem;
+      margin-bottom: -2rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .homeVideoMainContainer .video-info {
+    width: 45vw;
+    gap: 0.5rem;
+    padding: 6rem 0 0 1.6rem;
+  }
+  .homeVideoMainContainer .video-info .overview {
+    margin-bottom: 0.5rem;
+  }
+
+  .homeVideoMainContainer .video-info .title h1 {
+    font-size: 1.5rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns button {
+    width: 4rem;
+    height: 1.5rem;
+    font-size: 0.7rem;
+  }
+  .homeVideoMainContainer .video-info .overview {
+    font-size: 0.8rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns {
+    gap: 0.5rem;
+  }
+  @keyframes movieInfo {
+    0% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: -0.2rem;
+    }
+    90% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: -0.2rem;
+    }
+    100% {
+      font-size: 1rem;
+      margin-bottom: -5rem;
+      margin-top: 1.3rem;
+    }
+  }
+}
+@media only screen and (min-width: 715px) {
+  .homeVideoMainContainer .video-info {
+    width: 40vw;
+    gap: 0.5rem;
+    padding: 8rem 0 0 1.6rem;
+    margin-top: -rem;
+  }
+  @keyframes movieInfo {
+    0% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: 0rem;
+    }
+    90% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: 0rem;
+    }
+    100% {
+      font-size: 1rem;
+      margin-bottom: -5rem;
+      margin-top: 2.5rem;
+    }
+  }
+}
+@media only screen and (min-width: 815px) {
+  .homeVideoMainContainer .video-info {
+    width: 40vw;
+    gap: 0.5rem;
+    padding: 10rem 0 0 1.6rem;
+  }
+  @keyframes movieInfo {
+    0% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: 0rem;
+    }
+    90% {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      margin-top: 0rem;
+    }
+    100% {
+      font-size: 1rem;
+      margin-bottom: -5.5rem;
+      margin-top: 3rem;
+    }
+  }
+
+  .homeVideoMainContainer .video-info .title h1 {
+    font-size: 2rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns button {
+    width: 5.5rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+  .homeVideoMainContainer .video-info .overview {
+    font-size: 1rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns {
+    gap: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .homeVideoMainContainer {
+    margin-bottom: -35vh;
+  }
+  .homeVideoMainContainer .video-info {
+    height: 105vh;
+    width: 40vw;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 5rem 10rem 4rem;
+  }
+  .homeVideoMainContainer .video-info .title h1 {
+    font-size: 3rem;
+  }
+  .homeVideoMainContainer .video-info .overview {
+    font-size: 1.5rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns {
+    gap: 1rem;
+  }
+  .homeVideoMainContainer .video-info .trailer-btns button {
+    width: 160px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  @keyframes movieInfo {
+    0% {
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
+    90% {
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
+    100% {
+      font-size: 1.8rem;
+      margin-bottom: -8rem;
+    }
+  }
+  @-webkit-keyframes movieInfo {
+    0% {
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
+    90% {
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
+    100% {
+      font-size: 1.8rem;
+      margin-bottom: -8rem;
+    }
   }
 }

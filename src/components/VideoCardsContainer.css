@@ -47,11 +47,16 @@
   cursor: pointer;
   outline: inherit;
   position: absolute;
-  height: 54%;
+  height: 55%;
   width: 3vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #ffff;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.3);
   z-index: 6;
+}
+.scroll:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 1);
 }
 
 .right {

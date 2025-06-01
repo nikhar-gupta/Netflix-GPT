@@ -1,4 +1,3 @@
-import React from "react";
 import "./HomeVideoMainContainer.css";
 import VideoPlayer from "./VideoPlayer";
 import VideoInfo from "./VideoInfo";
